@@ -4,9 +4,9 @@
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/gameworld?serverTimezone=Europe/Warsaw</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">test</property>
+        <property name="connection.url">jdbc:mysql://jareczeq.pl:3306/gameworld?serverTimezone=Europe/Warsaw</property>
+        <property name="hibernate.connection.username">sdacademy</property>
+        <property name="hibernate.connection.password">Sdacademy1!</property>
         <property name="hibernate.connection.autocommit">true</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>

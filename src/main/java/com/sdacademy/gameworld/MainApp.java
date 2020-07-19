@@ -4,50 +4,16 @@ import com.sdacademy.gameworld.models.*;
 import com.sdacademy.gameworld.utils.HashPassword;
 import com.sdacademy.gameworld.utils.HibernateManager;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.omg.SendingContext.RunTime;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 public class MainApp {
-
-    public static void main(String[] args) {
-
-        Session session = HibernateManager.getSessionFactory().openSession();
-
-        User user4 = session.find(User.class, 4);
-        Country country = session.find(Country.class, 3);
-        /*Game game1 = session.find(Game.class, 1);*/
-
-        int count = 2;
-
-        /*Order order = new Order();
-        order.setGame(game1);
-        order.setCount(count);
-        order.setDateOrder(new Date());
-        order.setStatusOrder(StatusOrder.IN_PROGRESS);
-        order.setUser(user4);
-        order.setAddress(user4.getAddress());*/
-
-
-        Transaction transaction = session.getTransaction();
-
-        try {
-            transaction.begin();
-
-
-
-            transaction.commit();
-        } catch (Exception e) {
-            transaction.rollback();
-        } finally {
-            session.close();
-            HibernateManager.getSessionFactory().close();
-        }
-
-    }
-
 
     ///Game
     /* Game game = new Game();
