@@ -1,5 +1,7 @@
 package com.dergax_and_jareq.game.service;
 
+
+
 import com.dergax_and_jareq.game.entity.User;
 import com.dergax_and_jareq.game.respository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +23,7 @@ public class UserService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException(s);
         }
-        return new User(user.getNick(), user.getPassword(), user.getEmail());
+        return new org.springframework.security.core.userdetails.User(user.getLogin(), user.getPassword(), new ArrayList<>());
 
     }
 }
