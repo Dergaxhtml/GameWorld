@@ -1,4 +1,7 @@
-<link rel="stylesheet" type="text/css" href="styles/navbar.css">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity4">
+<navbar th:fragment="navbar">
+<link rel="stylesheet" type="text/css" href="css/navbar.css">
 <nav class="navbar">
     <a href="#">
         <img class="navbar-logo" src="images/logo.png">
@@ -10,7 +13,7 @@
     <div class="navbar-menu">
         <ul class="navbar-menu-list">
             <li class="navbar-menu-list-item">
-                <a href="listgames.html">
+                <a href="../listgames.html">
                     <i class="fas fa-list-ul"></i>
                     Lista Gier
                 </a>
@@ -25,3 +28,4 @@
     </div>
 </nav>
 <script type="text/javascript" src="scripts/navbar-search.js"></script>
+</navbar>
