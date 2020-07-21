@@ -13,7 +13,7 @@ public class User {
     @Column(name = "ID")
     private int id;
     @Column(name = "Nick")
-    private String nick;
+    private String login;
     @Column(name = "Password")
     private String password;
     @Column(name = "E_Mail")
@@ -33,12 +33,18 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Order> orders;
 
+private String passwordConfirm;
+
+    public String getPasswordConfirm() {
+        return passwordConfirm;
+    }
+
     public int getId() {
         return id;
     }
 
-    public String getNick() {
-        return nick;
+    public String getLogin() {
+        return login;
     }
 
     public String getPassword() {
@@ -69,8 +75,8 @@ public class User {
         return games;
     }
 
-    public void setNick(String nick) {
-        this.nick = nick;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public void setPassword(String password) {

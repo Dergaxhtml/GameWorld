@@ -11,23 +11,29 @@
 <body>
 <div th:insert="fragments/navbar :: navbar"></div>
 
-<main>
-    <header style="text-align: center">
-        <div class="container">
+
+<div style="text-align: center">
+    <div class="container">
+        <form th:action="@{/login}" method="post">
+            <div th:if="${param.error}">
+                <div class="alert alert-danger">
+                    Invalid login or password.
+                </div>
+            </div>
             <h2>Zaloguj się!</h2>
             <form action="" method="post">
-                <input name="login" type="text" placeholder="Podaj login lub e-mail..." required>
-                <input name="password" type="password" placeholder="Podaj hasło..." required>
+                <input id="username" name="username" class="form-control input-lg" type="text"
+                       placeholder="Podaj login lub e-mail..." required="true" autofocus="true"/>
+                <input id="password" name="password" class="form-control input-lg" type="password"
+                       placeholder="Podaj hasło..." required="true"/>
                 <button type="submit">Zaloguj się!</button>
             </form>
 
             <a href="#">Nie masz konta? Zarejestruj się!</a>
-        </div>
-    </header>
-</main>
-<script type="text/javascript" src="scripts/navbar-search.js"></script>
-<script type="text/javascript">
 
-</script>
+        </form>
+    </div>
+</div>
 </body>
 </html>
+
