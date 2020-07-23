@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+
+    <div th:insert="fragments/head :: head"></div>
+
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+
+</head>
+<body>
+<div th:insert="fragments/navbar :: navbar"></div>
+
+
+<div style="text-align: center">
+    <div class="container">
+        <h2>Założ konto!</h2>
+        <form action="" method="post">
+            <input name="login" type="text" placeholder="Podaj login..."/>
+            <input name="password" type="password" placeholder="Podaj hasło..."/>
+            <input name="repeatpassword" type="password" placeholder="Powtórz hasło..."/>
+            <input name="email" type="text" placeholder="Podaj e-mail.."/>
+            <input name="date" type="date" placeholder="Podaj datę urodzenia..."/>
+            <button type="submit">Zarejestruj się!</button>
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>

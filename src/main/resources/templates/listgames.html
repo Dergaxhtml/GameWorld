@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <div th:insert="fragments/head :: head"></div>
+
+    <link rel="stylesheet" type="text/css" href="css/listgames.css">
+
+</head>
+<body>
+<div th:insert="fragments/navbar :: navbar"></div>
+
+<main>
+    <header>
+        <div class="container">
+            <div class="games-filter-menu">
+                <a class="games-filter-name"><i class="fas fa-filter"></i>Filtr</a>
+                <div class="game-filter-columns">
+                    <div class="game-filter-column">
+                        <h4 class="game-filter-column-name">Platforma:</h4>
+                        <select>
+                            <option value="PC" selected>PC</option>
+                            <option value="PS3">PS3</option>
+                            <option value="PS4">PS4</option>
+                            <option value="PS5">PS5</option>
+                            <option value="XBOX_360">XBOX 360</option>
+                            <option value="XBOX_ONE">XBOX ONE</option>
+                            <option value="XBOX_SERIES_X">XBOX SERIES X</option>
+                        </select>
+                    </div>
+                    <div class="game-filter-column">
+                        <h4 class="game-filter-column-name">Data Wydania:</h4>
+                        <input type="date">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <a class="games-column" href="#">
+                        <img class="games-column-image" src="images/watch-dogs-2.jpg"/>
+                        <div class="games-column-info">
+                            <h3 class="games-name">Watch Dogs 2</h3>
+                            <ul style="list-style-type: none; margin: 10px 0;">
+                                <li style="font-size: 14px">Producent: <b>Ubisoft Montreal</b></li>
+                                <li style="font-size: 14px">Wydawca: <b>Ubisoft</b></li>
+                                <li style="font-size: 14px">Data Wydania: <b>29.11.2017</b></li>
+                                <li style="font-size: 14px">Platforma: <b>PC</b></li>
+                                <li style="font-size: 14px">Wymagany Wiek: <b>18</b></li>
+                                <li style="font-size: 14px">Ilość: <b>1</b></li>
+                            </ul>
+                            <h4 class="games-prize">Cena: <span style="color: red;">199,99zł</span></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <a class="games-column" href="#">
+                        <img class="games-column-image" src="images/ark-survival-evolved.jpg"/>
+                        <div class="games-column-info">
+                            <h3 class="games-name">Ark: Survival Evolved</h3>
+                            <ul style="list-style-type: none; margin: 10px 0;">
+                                <li style="font-size: 14px">Producent: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Wydawca: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Data Wydania: <b>29.08.2017</b></li>
+                                <li style="font-size: 14px">Platforma: <b>PC</b></li>
+                                <li style="font-size: 14px">Wymagany Wiek: <b>16</b></li>
+                                <li style="font-size: 14px">Ilość: <b>1</b></li>
+                            </ul>
+                            <h4 class="games-prize">Cena: <span style="color: red;">249,99zł</span></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <a class="games-column" href="#">
+                        <img class="games-column-image" src="images/ark-survival-evolved.jpg"/>
+                        <div class="games-column-info">
+                            <h3 class="games-name">Ark: Survival Evolved</h3>
+                            <ul style="list-style-type: none; margin: 10px 0;">
+                                <li style="font-size: 14px">Producent: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Wydawca: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Data Wydania: <b>29.08.2017</b></li>
+                                <li style="font-size: 14px">Platforma: <b>PC</b></li>
+                                <li style="font-size: 14px">Wymagany Wiek: <b>16</b></li>
+                                <li style="font-size: 14px">Ilość: <b>1</b></li>
+                            </ul>
+                            <h4 class="games-prize">Cena: <span style="color: red;">249,99zł</span></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <a class="games-column" href="#">
+                        <img class="games-column-image" src="images/ark-survival-evolved.jpg"/>
+                        <div class="games-column-info">
+                            <h3 class="games-name">Ark: Survival Evolved</h3>
+                            <ul style="list-style-type: none; margin: 10px 0;">
+                                <li style="font-size: 14px">Producent: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Wydawca: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Data Wydania: <b>29.08.2017</b></li>
+                                <li style="font-size: 14px">Platforma: <b>PC</b></li>
+                                <li style="font-size: 14px">Wymagany Wiek: <b>16</b></li>
+                                <li style="font-size: 14px">Ilość: <b>1</b></li>
+                            </ul>
+                            <h4 class="games-prize">Cena: <span style="color: red;">249,99zł</span></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <a class="games-column" href="#">
+                        <img class="games-column-image" src="images/ark-survival-evolved.jpg"/>
+                        <div class="games-column-info">
+                            <h3 class="games-name">Ark: Survival Evolved</h3>
+                            <ul style="list-style-type: none; margin: 10px 0;">
+                                <li style="font-size: 14px">Producent: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Wydawca: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Data Wydania: <b>29.08.2017</b></li>
+                                <li style="font-size: 14px">Platforma: <b>PC</b></li>
+                                <li style="font-size: 14px">Wymagany Wiek: <b>16</b></li>
+                                <li style="font-size: 14px">Ilość: <b>1</b></li>
+                            </ul>
+                            <h4 class="games-prize">Cena: <span style="color: red;">249,99zł</span></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <a class="games-column" href="#">
+                        <img class="games-column-image" src="images/ark-survival-evolved.jpg"/>
+                        <div class="games-column-info">
+                            <h3 class="games-name">Ark: Survival Evolved</h3>
+                            <ul style="list-style-type: none; margin: 10px 0;">
+                                <li style="font-size: 14px">Producent: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Wydawca: <b>Studio Wildcard</b></li>
+                                <li style="font-size: 14px">Data Wydania: <b>29.08.2017</b></li>
+                                <li style="font-size: 14px">Platforma: <b>PC</b></li>
+                                <li style="font-size: 14px">Wymagany Wiek: <b>16</b></li>
+                                <li style="font-size: 14px">Ilość: <b>1</b></li>
+                            </ul>
+                            <h4 class="games-prize">Cena: <span style="color: red;">249,99zł</span></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </div>
+    </header>
+</main>
+<script type="text/javascript" src="scripts/navbar-search.js"></script>
+<script type="text/javascript">
+    $(document).ready(() => {
+        $(".games-filter-name").click(() => {
+
+            const filterColumns = $(".game-filter-columns");
+
+            if (filterColumns.hasClass("active")) {
+                filterColumns.removeClass("active");
+            } else {
+                filterColumns.addClass("active");
+            }
+        });
+    });
+</script>
+</body>
+</html>
