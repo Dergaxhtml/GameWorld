@@ -1,16 +1,8 @@
 package com.dergax_and_jareq.game;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
+
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import javax.xml.crypto.Data;
-import java.sql.*;
-
 
 @SpringBootTest
 class GameWorldApplicationTests {
