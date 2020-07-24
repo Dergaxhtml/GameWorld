@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
-
-     <div th:insert="fragments/head :: head"></div>
-
+    <title>GameWorld » Sklep Internetowy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <script type="application/javascript" src="vendors/jquery/jquery.min.js"></script>
 </head>
 <body>
 
-<div th:insert="fragments/navbar :: navbar"></div>
+<main>
+    <navbar th:insert="fragments/navbar :: navbar"></navbar>
+    <script type="text/javascript" src="scripts/navbar-search.js"></script>
+</main>
 
 </body>
 </html>

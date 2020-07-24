@@ -1,9 +1,9 @@
 spring:
   datasource:
     platform: mysql
-    url: jdbc:mysql://127.0.0.1:3306/game?serverTimezone=CET
-    username: dergax
-    password: Test
+    url: jdbc:mysql://127.0.0.1:3306/gameworld?serverTimezone=CET
+    username: root
+    password: test
     driverClassName: com.mysql.cj.jdbc.Driver
 
   jpa:

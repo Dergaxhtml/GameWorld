@@ -16,6 +16,9 @@ public class User {
     private String login;
     @Column(name = "Password")
     private String password;
+    @Transient
+    @Column(name = "password_confirm")
+    private String passwordConfirm;
     @Column(name = "E_Mail")
     private String email;
     @Column(name = "First_Name")
@@ -32,8 +35,6 @@ public class User {
     private List<Game> games;
     @OneToMany(mappedBy = "user")
     private List<Order> orders;
-
-private String passwordConfirm;
 
     public String getPasswordConfirm() {
         return passwordConfirm;
