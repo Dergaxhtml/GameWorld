@@ -17,11 +17,9 @@ import javax.validation.Valid;
 
 @Controller
 public class UserController {
-    @Autowired
-    UserRepository userRepository;
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @RequestMapping(value = "/login")
     public String login() {
@@ -39,7 +37,7 @@ public class UserController {
         if (result.hasErrors()) {
             return "register";
         } else {
-userService.createUser(user);
+            userService.createUser(user);
             return "redirect:/login";
         }
     }
