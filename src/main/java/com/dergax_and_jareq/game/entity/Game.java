@@ -23,8 +23,8 @@ public class Game {
     @Temporal(TemporalType.DATE)
     @Column(name = "Date_Release")
     private Date dateRelease;
-    @Column(name = "Prize")
-    private double prize;
+    @Column(name = "Price")
+    private double price;
     @Column(name = "Count")
     private int count;
     @Enumerated(EnumType.STRING)
@@ -60,8 +60,8 @@ public class Game {
         return dateRelease;
     }
 
-    public double getPrize() {
-        return prize;
+    public double getPrice() {
+        return price;
     }
 
     public int getCount() {
@@ -100,8 +100,8 @@ public class Game {
         this.dateRelease = dateRelease;
     }
 
-    public void setPrize(double prize) {
-        this.prize = prize;
+    public void setPrize(double price) {
+        this.price = price;
     }
 
     public void setCount(int count) {

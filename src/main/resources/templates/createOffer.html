@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>GameWorld » Sklep Internetowy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/createOffer.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <script type="application/javascript" src="vendors/jquery/jquery.min.js"></script>
+</head>
+<body>
+
+<main>
+    <navbar th:insert="fragments/navbar :: navbar"></navbar>
+    <script type="text/javascript" src="scripts/navbar-search.js"></script>
+</main>
+
+<form th:action="@{/createOffer}" th:object="${game}" method="post">
+    <div class="container">
+        <fieldset>
+            <h1>Dodaj grę na sprzedaż</h1>
+            <p>Proszę wypełnij wszystkie pola, aby sfinalizować transakcję</p>
+            <hr>
+
+            <label for="name"><b>Nazwa</b></label>
+            <input type="text" placeholder="Wprowadź nazwę" th:field="*{name}" name="name" id="name" required="true"/>
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"> Name Error</span>
+
+            <label for="price"><b>Price</b></label>
+            <input type="text" placeholder="Wprowadź cenę" th:field="*{price}" name="price" id="price" required="true"/>
+            <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="text-danger"> Price Error</span>
+
+            <hr>
+
+            <p>Do stowrzenia oferty jest potrzeban akceptacja regulaminu <a
+                    href="https://ocdn.eu/pulscms-transforms/1/QGPk9kpTURBXy9kNjgzMTlmMzcwN2YyOWU2YmQ3NTJlOWJkNDZiMDFhMy5qcGeTlQMAXs0DhM0B-pMFzQMUzQG8kwmmMjViMjkxBoGhMAE/.jpg">Terms
+                & Privacy</a>.</p>
+            <button type="submit" class="createbtn">Stwórz</button>
+        </fieldset>
+    </div>
+</form>
+</body>
+</html>
