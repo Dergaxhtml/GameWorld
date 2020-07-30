@@ -1,5 +1,6 @@
 package com.dergax_and_jareq.game.controller;
 
+import com.dergax_and_jareq.game.entity.Game;
 import com.dergax_and_jareq.game.entity.User;
 import com.dergax_and_jareq.game.respository.UserRepository;
 import com.dergax_and_jareq.game.service.UserService;
@@ -41,6 +42,7 @@ public class UserController {
             return "redirect:/login";
         }
     }
+
 
 
 }
